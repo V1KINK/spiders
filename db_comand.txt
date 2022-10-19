@@ -1,0 +1,24 @@
+豆瓣：
+drop table if exists `top_movie`;
+
+create table `top_movie` (
+    `movie_id` int unsigned auto_increment comment '编号',
+    `title` varchar(50) not null comment '标题',
+    `rating` decimal(3,1) not null comment '评分',
+    `subject` varchar(200) default '' comment '主题',
+    `duration` int not null comment '时长',
+    `introduce` varchar(10000) default '' comment '简介',
+    primary key (`movie_id`)
+) engine=InnoDB comment='Top电影表';
+
+
+
+京东显卡：
+drop table if exists `graphics_jd`;
+
+create table `graphics_jd` (
+    `model_id` int unsigned auto_increment comment '编号',
+    `model` varchar(200) not null comment '型号描述',
+    `price` decimal(5,3) not null comment '价格',
+    `link` varchar(2000) default '' comment '链接',
+    primary key (`model_id`)
